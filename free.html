@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<head>
+<title>Free Hosting - CG博客</title>
+
+
+<script type="text/javascript">
+function ismaxlength(obj){
+        var mlength=obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : "";
+        if (obj.getAttribute && obj.value.length>mlength);
+                obj.value=obj.value.substring(0,mlength);
+}
+
+function shua() {document.getElementById("yanzhengma").src="http://order.xiyu.work/image.php?id="+Math.random();}
+</script>
+
+</head>
+<body>
+
+
+  
+<h3>申请英国免费虚拟主机</h3>
+  
+
+        
+		<form id="updatedetails" name="updatedetails" class="signup" method=post action="http://order.xiyu.work/register2.php">
+			<table>
+				<div class="form-group">
+				<tr>
+				<th>domain<td>
+				<input class="form-control" type=text name=username size=30 value=""  maxlength="16" onkeyup="return ismaxlength(this)">.xiyu.work
+				<td>
+				</div>
+				
+				<div class="form-group">
+				<tr>
+				<th>Password<td>
+				<input class="form-control" type=password name=password size=30 maxlength="8" onkeyup="return ismaxlength(this)">
+				<td>
+				</div>
+				
+				<div class="form-group">
+				<tr>
+				<th>Email<td>
+				<input class="form-control" type=text name=email size=30 value=""></td>
+				</tr>
+				</div>
+				
+				<div class="form-group">
+				<tr>
+				<th>Category<td>
+				<select  class="form-control" size="1" name="website_category">
+				<option>Personal</option>
+				<option>Business</option>
+				<option>Hobby</option>
+				<option>Forum</option>
+				<option>Adult</option>
+				<option>Dating</option>
+				<option>Software / Download</option>
+				</select>
+				</td>
+				</tr>
+				</div>
+				
+				<div class="form-group">
+				<tr>
+				<th>Language<td>
+				<select  class="form-control" size="1" name="website_language">
+				<option>English</option>
+				<option>Non-English</option>
+				</select>
+				</td>
+				</tr>
+				</div>
+				
+				<input type=hidden name=id value="<?PHP echo $id; ?>">
+				<tr>
+				<th>Security Code<td>
+				<div >
+				<img width="250px" height="90px" src="http://order.xiyu.work/image.php" id=yanzhengma onclick="shua();" />
+				</div>
+				<td>
+				<tr>
+				<th>Security Code<td>
+				<input class="form-control" type=text name=number size=30><td>
+				<tr>
+				<th colspan=2>
+				<button type="submit" class="btn btn-primary">OK</button><td>
+				</tr>
+			</table>
+		</form>
+		&copy; 2021 <a href=http://o.chaoyuyan.com/>相对技术</a> & <a href=http://chaoyuyan.com/>超语言</a>
+
+</body>
+</html>
