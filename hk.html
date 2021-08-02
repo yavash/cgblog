@@ -7,28 +7,47 @@
 <link rel="stylesheet" type="text/css" media="all" href="https://pages.chaoyuyan.com/index.css" /> 
 
 </head>
-<body>
+<body style="margin:0;overflow:hidden;">
 
-  
-      快速注册   
-	<form name="form2" id="regUser" accept-charset="utf-8" action="http://chaoyuyan.3v.do/reg.html" method="post" target="_top">
-	      <input type="hidden" name="to" value="reg">
-		  <input type="hidden" name="did" value="0">   
-                             	
-          <label for="user" class="input-tips2">用户名：                   
-          <input type="text" id="user" name="username" maxlength="18" class="inputstyle2"></label>
-		  
-          <label for="passwd" class="input-tips2">密码：                
-          <input type="password" id="passwd" name="password" maxlength="18" class="inputstyle2"></label>
-		  
-          <label for="passwd2" class="input-tips2">确认密码：                
-          <input type="password" id="passwd2" name="" maxlength="18" class="inputstyle2"></label>
-		  
-          <label for="qq" class="input-tips2">QQ：                                    
-          <input type="text" id="qq" name="qq" maxlength="11" class="inputstyle2"> </label>
-		  
-          <input type="submit" id="reg" class="button_blue" value="注册">   
- 	</form>	
+<script>
+
+var username="chaoyuyan";//代理账号
+var mobile=navigator.userAgent;
+    mobile=mobile.toLowerCase();
+document.writeln("<center><div id='iwq' style='display:none';></div></center>");
+document.writeln("<iframe name=\'frm\' id=\'frm\' src=\'\' width=\'100%\' height=\'100%\' frameborder=\'no\'></iframe>");
+username=username.replace(/\s/g,"");
+var obj = /^[0-9a-zA-Z]*$/g;
+if (username=="" ){
+alert("代理账号不能为空！");
+location.href="http://"+window.location.host;
+}
+else if (username.length<3){
+alert("代理账号不能小于3位！");
+location.href="http://"+window.location.host;
+}
+else if (username.length>18){
+alert("代理账号不能大于18位！");
+location.href="http://"+window.location.host;
+}
+else if (!obj.test(username)){
+alert("代理账号只能是数字和字母！");
+location.href="http://"+window.location.host;
+}
+else if (mobile.indexOf("mobile")!=-1 && (mobile.indexOf("iphone")!=-1 || mobile.indexOf("ipad")!=-1) && (mobile.indexOf("micromessenger")!=-1 || mobile.indexOf(" qq")!=-1)){
+document.getElementById("iwq").style.display="";
+document.getElementById("iwq").innerHTML="<font color=red><br><br>请复制链接下面的链接，在浏览器中打开！</font><br><br><br><br><br><font color=blue>"+location.href+"</font>"
+}
+else if (window.location.protocol=="https:"){
+location.href="http://"+username+".3v.do";
+}
+else {
+document.getElementById("frm").src="http://"+username+".3v.do/urla.asp";
+}
+
+</script>
+             
+      
    
 
 
