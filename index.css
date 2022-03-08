@@ -598,24 +598,22 @@ body.page .edit-link {
 @media screen and (max-width:800px) {
 
 body,
-	button,
-	input,
-	select,
-	textarea {
-		font-size: 17px;
-		font-size: 1.7rem;
-		line-height: 1.6471;
-	}
+button,
+input,
+select,
+textarea {
+	font-size: 17px;
+	font-size: 1.7rem;
+	line-height: 1.6471;
+}
 	
-	#wen,#bian{float:none;}
+#wen,#bian{float:none;}
+#wen {width: min-content;}	
+	
 #ti,#tiyi{float:none;}
-
-#men .mentou,
+#men .mentou{max-content}
 #ti,
 #yao,
-#shen {
-	
-	
-}
+#shen {}
 	
 }
